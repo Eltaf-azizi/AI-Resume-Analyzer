@@ -1,5 +1,27 @@
 
 {
+  "technical": [
+    "python",
+    "sql",
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "tensorflow",
+    "pytorch",
+    "docker",
+    "aws",
+    "gcp",
+    "kubernetes",
+    "spark",
+    "hadoop",
+    "airflow",
+    "rest api",
+    "javascript",
+    "react",
+    "node.js",
+    "git"
+  ],
+  
   "soft": [
     "communication",
     "teamwork",
