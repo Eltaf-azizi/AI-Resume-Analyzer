@@ -1,0 +1,5 @@
+Title: Data Scientist
+We are looking for a Data Scientist with strong skills in Python,
+SQL, Pandas, NumPy, and machine learning using scikit-learn or
+TensorFlow. Experience with cloud platforms (AWS/GCP), Docker,
+and production ML pipelines (Airflow, Kubernetes) is a plus.
