@@ -37,3 +37,23 @@ class SkillExtractor:
         # Use rapidfuzz process.extract to find best matches from skill_list
         candidates = process.extract(text_lower, self.skill_list, scorer=fuzz.partial_ratio, limit=200)
         matched = set()
+        for skill, score, _ in candidates:
+            if score >= self.threshold:
+                matched.add(skill)
+
+        # map matched back to categories
+        for cat, skills in self.skills_db.items():
+            for s in skills:
+                if s.lower() in matched:
+                    found.setdefault(cat, []).append(s)
+
+        # also try direct substring matches to catch multiword skills
+        for cat, skills in self.skills_db.items():
+            for s in skills:
+                if s.lower() in text_lower and s not in found.get(cat, []):
+                    found.setdefault(cat, []).append(s)
+                    
+        # dedupe
+        for k in found:
+            found[k] = sorted(list(set(found[k])), key=lambda x: x.lower())
+        return found
