@@ -18,3 +18,23 @@ class JobMatcher:
         self.job_meta = []
         self.job_embeddings = None
         self._load_job_descriptions()
+        
+
+
+    def _load_job_descriptions(self):
+        files = glob.glob(os.path.join(self.job_desc_dir, "*.txt"))
+        if not files:
+            return
+        self.job_texts = []
+        self.job_meta = []
+        for path in files:
+            with open(path, "r", encoding="utf-8") as fh:
+                txt = fh.read()
+            title = os.path.basename(path).replace(".txt", "").replace("_", " ").title()
+            self.job_texts.append(txt)
+            self.job_meta.append({"title": title, "path": path})
+            
+        # compute embeddings
+        try:
+            self.job_embeddings = self.embedding_model.fit_transform(self.job_texts)
+
