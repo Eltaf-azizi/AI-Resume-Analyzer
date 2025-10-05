@@ -37,4 +37,23 @@ class JobMatcher:
         # compute embeddings
         try:
             self.job_embeddings = self.embedding_model.fit_transform(self.job_texts)
+        except Exception:
+            self.job_embeddings = self.embedding_model.transform(self.job_texts)
 
+
+
+    def match(self, resume_text: str, top_k=5) -> List[Dict]:
+        if not self.job_texts:
+            return []
+        resume_emb = self.embedding_model.transform([resume_text])
+        sims = cosine_similarity(resume_emb, self.job_embeddings)[0]
+        idx = np.argsort(-sims)[:top_k]
+        results = []
+
+        for i in idx:
+            results.append({
+                "title": self.job_meta[i]["title"],
+                "score": float(sims[i]),
+                "excerpt": self.job_texts[i][:400]
+            })
+        return results
