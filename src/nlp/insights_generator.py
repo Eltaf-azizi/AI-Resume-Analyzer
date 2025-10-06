@@ -25,3 +25,27 @@ class InsightsGenerator:
         return missing[: self.top_k]
 
 
+
+    def skill_gap_summary(self, extracted_skills: Dict[str, List[str]], matched_roles: List[Dict]) -> Dict:
+        """
+        Return a simple summary of gaps across matched roles.
+        """
+
+        role_recs = []
+        for role in matched_roles:
+            # crude extraction: split job excerpt into words that look like skills (very simple)
+            # In practice, you'd parse the JD more carefully.
+            words = role["excerpt"].split()
+
+            # pick nouns/tech tokens heuristically by comparison with taxonomy
+            required = []
+            tax_flat = {s.lower() for cat in self.taxonomy.values() for s in cat}
+            
+            for token in words:
+                t = token.strip(",.()").lower()
+                if t in tax_flat and t not in required:
+                    required.append(t)
+
+            missing = self.missing_skills(extracted_skills, required)
+            role_recs.append({"role": role["title"], "missing": missing, "score": role["score"]})
+        return {"role_recommendations": role_recs}
