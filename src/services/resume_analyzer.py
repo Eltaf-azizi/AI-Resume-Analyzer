@@ -36,3 +36,24 @@ class ResumeAnalyzerService:
             raw = parse_pdf(path)
         elif ext in [".docx", ".doc"]:
             raw = parse_docx(path)
+        else:
+            with open(path, "r", encoding="utf-8") as fh:
+                raw = fh.read()
+
+        return clean_text(raw)
+
+
+
+    def analyze(self, path: str) -> Dict[str, Any]:
+        text = self._parse_file(path)
+        skills = self.skill_extractor.extract(text)
+        matched_roles = self.job_matcher.match(text, top_k=self.settings["app"]["top_k_roles"])
+        insights = self.insights.skill_gap_summary(skills, matched_roles)
+        
+        return {
+            "parsed_text_snippet": text[:1500],
+            "skills": skills,
+            "matched_roles": matched_roles,
+            "insights": insights
+        }
+
