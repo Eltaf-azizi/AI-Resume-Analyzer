@@ -45,3 +45,14 @@ AI Resume Analyzer is an advanced NLP-based application that analyzes resumes, e
     │   └── utils/
     ├── tests/
     └── docs/
+
+
+
+## 🧠 Core Workflow
+
+ 1. Upload Resume → User uploads PDF or DOCX
+ 2. Parsing → Extract and clean text using file parsers
+ 3. Skill Extraction → NLP model identifies technical and soft skills
+ 4. Job Matching → Compare resume with available job descriptions
+ 5. Insights Generation → Highlight strengths, weaknesses, and suggestions
+ 6. Recommendations → Recommend roles and learning paths
