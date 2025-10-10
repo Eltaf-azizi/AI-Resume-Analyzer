@@ -21,3 +21,27 @@ AI Resume Analyzer is an advanced NLP-based application that analyzes resumes, e
 
  - **Web Interface:**
   Upload your resume and instantly get an interactive analysis report (Streamlit UI).
+
+
+## Project Structure
+
+    ai-resume-analyzer/
+    ├── README.md
+    ├── requirements.txt
+    ├── config/
+    │   ├── settings.yaml
+    │   └── logging.conf
+    ├── data/
+    │   ├── sample_resumes/
+    │   ├── job_descriptions/
+    │   └── skills_database.json
+    ├── src/
+    │   ├── main.py
+    │   ├── parsers/
+    │   ├── nlp/
+    │   ├── services/
+    │   ├── api/
+    │   ├── ui/
+    │   └── utils/
+    ├── tests/
+    └── docs/
