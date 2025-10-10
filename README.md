@@ -56,3 +56,21 @@ AI Resume Analyzer is an advanced NLP-based application that analyzes resumes, e
  4. Job Matching → Compare resume with available job descriptions
  5. Insights Generation → Highlight strengths, weaknesses, and suggestions
  6. Recommendations → Recommend roles and learning paths
+
+
+## ⚙️ Installation
+### 1. Clone the repository
+```
+git clone https://github.com/yourusername/ai-resume-analyzer.git
+cd ai-resume-analyzer
+```
+### 2. Create a virtual environment
+```
+python -m venv venv
+source venv/bin/activate   # for macOS/Linux
+venv\Scripts\activate      # for Windows
+```
+### 3. Install dependencies
+```
+pip install -r requirements.txt
+```
