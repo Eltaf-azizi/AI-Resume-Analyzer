@@ -74,3 +74,20 @@ venv\Scripts\activate      # for Windows
 ```
 pip install -r requirements.txt
 ```
+
+
+## 🧾 Usage
+### Option 1: Command Line
+
+Run the analyzer directly:
+```
+python src/main.py --file path/to/resume.pdf
+```
+### Option 2: Web App (Streamlit UI)
+
+Launch the interactive interface:
+```
+streamlit run src/ui/app.py
+```
+
+Upload your resume → get insights → explore recommended skills and roles.
