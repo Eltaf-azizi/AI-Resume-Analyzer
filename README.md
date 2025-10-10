@@ -105,7 +105,7 @@ Upload your resume → get insights → explore recommended skills and roles.
 | Testing	      | pytest                                    |
 
 
-📁 Key Modules Overview
+## 📁 Key Modules Overview
 | Module          |	Description                                                 |
 |-----------------|-------------------------------------------------------------|
 | src/parsers/   	| Extracts and cleans resume text from various formats        |
@@ -114,3 +114,11 @@ Upload your resume → get insights → explore recommended skills and roles.
 | src/api/	       | FastAPI endpoints for integration                           |
 | src/ui/	        | Streamlit interface for uploading and analyzing resumes     |
 | src/utils/	     | Helper utilities for logging and text preprocessing         |
+
+
+## 🧪 Testing
+
+Run unit and integration tests:
+```
+pytest tests/
+```
