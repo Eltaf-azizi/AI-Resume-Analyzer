@@ -103,3 +103,14 @@ Upload your resume → get insights → explore recommended skills and roles.
 | Logging      	| Python logging module                     |
 | Storage	      | JSON-based skill taxonomy                 |
 | Testing	      | pytest                                    |
+
+
+📁 Key Modules Overview
+| Module          |	Description                                                 |
+|-----------------|-------------------------------------------------------------|
+| src/parsers/   	| Extracts and cleans resume text from various formats        |
+| src/nlp/        | Handles embeddings, skill extraction, job matching, insights|
+| src/services/	  | Main logic pipeline and recommendation system               |
+| src/api/	       | FastAPI endpoints for integration                           |
+| src/ui/	        | Streamlit interface for uploading and analyzing resumes     |
+| src/utils/	     | Helper utilities for logging and text preprocessing         |
