@@ -91,3 +91,15 @@ streamlit run src/ui/app.py
 ```
 
 Upload your resume → get insights → explore recommended skills and roles.
+
+
+## 🧰 Tech Stack
+| Category     	| Tools  Libraries                          |
+|---------------|-------------------------------------------|
+| Language	     | Python 3.10+                              |
+| Web Framework	| FastAPI / Streamlit                       |
+| NLP & AI     	| spaCy, transformers, sentence-transformers|
+| Data Parsing	 | pdfminer.six, python-docx                 |
+| Logging      	| Python logging module                     |
+| Storage	      | JSON-based skill taxonomy                 |
+| Testing	      | pytest                                    |
