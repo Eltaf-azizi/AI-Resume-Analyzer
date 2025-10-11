@@ -122,3 +122,11 @@ Run unit and integration tests:
 ```
 pytest tests/
 ```
+
+
+## 🧭 Configuration
+
+App settings and model parameters are stored in:
+  - `config/settings.yaml` – model paths, thresholds, and feature flags
+  - `config/logging.conf` – logging configuration for debugging
+You can modify these to adjust model performance or logging levels.
