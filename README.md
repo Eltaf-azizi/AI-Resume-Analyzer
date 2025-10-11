@@ -140,3 +140,18 @@ You can modify these to adjust model performance or logging levels.
 | Matching Jobs	      | Data Analyst, Machine Learning Engineer               |
 | Missing Skills	     | SQL, TensorFlow                                       |
 | Recommendations	    | Learn SQL basics and TensorFlow through online courses|
+
+
+
+🗺️ Roadmap
+
+  - Add multilingual resume parsing
+  - Integrate GPT-based skill reasoning
+  - Connect with LinkedIn API for profile import
+  - Deploy as a web service (Render, AWS, or Hugging Face Spaces)
+  - Add PDF summary report download
+
+
+
+
+ 
