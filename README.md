@@ -152,6 +152,15 @@ You can modify these to adjust model performance or logging levels.
   - Add PDF summary report download
 
 
+## 📚 Documentation
+
+Detailed technical documents:
+
+ - `docs/architecture.md` – System overview and data flow
+
+ - `docs/nlp_pipeline.md` – NLP models and techniques
+
+ - `docs/roadmap.md` – Future goals and improvements
 
 
  
