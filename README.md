@@ -130,3 +130,13 @@ App settings and model parameters are stored in:
   - `config/settings.yaml` – model paths, thresholds, and feature flags
   - `config/logging.conf` – logging configuration for debugging
 You can modify these to adjust model performance or logging levels.
+
+
+## 🧩 Example Output
+
+| Section	            | Example                                               |
+|---------------------|-------------------------------------------------------|
+| Extracted Skills	   | Python, Data Analysis, Communication, Leadership      |
+| Matching Jobs	      | Data Analyst, Machine Learning Engineer               |
+| Missing Skills	     | SQL, TensorFlow                                       |
+| Recommendations	    | Learn SQL basics and TensorFlow through online courses|
