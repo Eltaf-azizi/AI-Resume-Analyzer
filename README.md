@@ -163,4 +163,8 @@ Detailed technical documents:
  - `docs/roadmap.md` – Future goals and improvements
 
 
+## 🤝 Contributing
+
+Contributions are welcome!
+Please fork the repository and submit a pull request with a clear description of your changes.
  
