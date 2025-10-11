@@ -166,5 +166,8 @@ Detailed technical documents:
 ## 🤝 Contributing
 
 Contributions are welcome!
-Please fork the repository and submit a pull request with a clear description of your changes.
+Please fork the repository and submit a pull request with a clear description of the changes you've made.
  
+## 📜 License
+
+This project is licensed under the MIT License – you’re free to use, modify, and distribute it.
